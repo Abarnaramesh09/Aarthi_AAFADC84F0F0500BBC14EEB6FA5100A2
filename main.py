@@ -1,19 +1,18 @@
-# Python program to find the factorial of a number provided by the user.
+def is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
 
-# change the value for a different result
-num = 7
+# Input from the user
+year = int(input("Enter a year: "))
 
-# To take input from the user
-#num = int(input("Enter a number: "))
-
-factorial = 1
-
-# check if the number is negative, positive or zero
-if num < 0:
-   print("Sorry, factorial does not exist for negative numbers")
-elif num == 0:
-   print("The factorial of 0 is 1")
+if is_leap_year(year):
+    print(f"{year} is a leap year.")
 else:
-   for i in range(1,num + 1):
-       factorial = factorial*i
-   print("The factorial of",num,"is",factorial)
+    print(f"{year} is not a leap year.")
+
+
+
+
+
